@@ -28,7 +28,7 @@ Starts on boot, restarts on failure, survives network and service outages on its
 
 ## Good to know
 
-- **Residential connection required (for now).** Nodes on VPN or datacenter IPs currently can't earn — run it on a normal home connection.
+- **Home connections earn the full rate.** Since v0.5.0, some datacenter/server IPs are also accepted on a separate reduced tier: they earn Beacon fragments at a **flat 50% rate, no points, and no referral bonuses**. VPN IPs and flagged hosting providers are not accepted. A home connection is always the better place to run a Beacon.
 - **Update:** re-run the install one-liner, then `sudo systemctl restart teneo-beacon`.
 - **Uninstall:** `sudo teneo-beacon --uninstall-service && sudo rm /usr/local/bin/teneo-beacon && rm -rf ~/.teneo-beacon`
 - If the device ever needs re-pairing (e.g. after a long offline stretch), it prints a fresh pairing link in its logs and keeps running — nothing breaks.
