@@ -8,7 +8,7 @@
 curl -sSL https://github.com/TeneoProtocolAI/teneo-beacon-cli/releases/latest/download/install.sh | bash
 ```
 
-Supported: `x86_64`, `arm64` (Raspberry Pi 3B+/4/5/Zero 2 W), `armv7` (Pi 2/3).
+Supported: Linux `x86_64`, `arm64` (Raspberry Pi 3B+/4/5/Zero 2 W), `armv7` (Pi 2/3), and **macOS** (Apple Silicon + Intel, universal binary — since v0.5.1).
 
 **Windows server or PC?** Install WSL2 first (`wsl --install` in an admin PowerShell, then reboot), open the Ubuntu terminal, and run the same command there — everything below works identically inside WSL.
 
@@ -23,10 +23,11 @@ A QR code and a link appear in the terminal. Scan the QR with your phone (or ope
 ## Run it as a service (recommended)
 
 ```bash
-sudo teneo-beacon --install-service
+sudo teneo-beacon --install-service   # Linux (systemd)
+teneo-beacon --install-service        # macOS (launchd, no sudo — starts at login)
 ```
 
-Starts on boot, restarts on failure, survives network and service outages on its own. Logs: `journalctl -u teneo-beacon -f`
+Starts on boot/login, restarts on failure, survives network and service outages on its own. Logs: `journalctl -u teneo-beacon -f` on Linux, `~/Library/Logs/teneo-beacon.log` on macOS.
 
 ## Good to know
 
