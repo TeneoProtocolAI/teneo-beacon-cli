@@ -10,6 +10,8 @@ curl -sSL https://github.com/TeneoProtocolAI/teneo-beacon-cli/releases/latest/do
 
 Supported: `x86_64`, `arm64` (Raspberry Pi 3B+/4/5/Zero 2 W), `armv7` (Pi 2/3).
 
+**Windows server or PC?** Install WSL2 first (`wsl --install` in an admin PowerShell, then reboot), open the Ubuntu terminal, and run the same command there — everything below works identically inside WSL.
+
 ## Pair it with your account
 
 ```bash
