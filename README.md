@@ -56,14 +56,14 @@ Other options: `teneo-beacon --help`.
 ## Where to run it
 
 - **Home and mobile connections are what Beacon is built for.** A Pi or home server behind your router is ideal.
-- **Servers and VPS:** hosting connections are handled under separate rules. They may earn at a reduced rate or may not be accepted.
+- **Servers and VPS** may earn at a reduced rate.
 - **VPNs and proxies are not supported.**
 
 ## Safety
 
 - Beacon relays network connections only. It never touches your files or other software.
 - It refuses connections to your local network, your router and other private addresses.
-- Email sending, remote login, DNS, file sharing, databases and device-debugging ports are blocked on the device itself.
+- Built-in safeguards refuse risky connection types on the device itself.
 - Participation is opt-in and tied to your Teneo account. Stop the service and the device stops sharing.
 
 See the [Terms of Service](https://legal.teneo.pro/terms) and [Privacy Policy](https://legal.teneo.pro/privacy).
